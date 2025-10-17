@@ -39,7 +39,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .mini-img-selector:hover {
@@ -86,6 +86,47 @@ body {
 /*section cours coach*/
 
 .s-cours-coach {
- height: 80vh;
- width: 100% ; 
+  margin-top: 100px;
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.5s ease;
 }
+
+.cours {
+  height: 60vh;
+  width: 45%;
+  background-color: var(--second-color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5%;
+
+}
+
+.coach {
+  height: 60vh;
+  width: 45%;
+  background-color: var(--second-color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cours, .coach {
+  transition: all 0.7s ease;
+}
+
+.s-cours-coach:has(.cours:hover) .cours { width: 60%; }
+.s-cours-coach:has(.cours:hover) .coach { width: 30%; }
+
+.s-cours-coach:has(.coach:hover) .coach { width: 60%; }
+.s-cours-coach:has(.coach:hover) .cours { width: 30%; }
+
+.cours, .coach { transition: width .45s ease; float:left; }
