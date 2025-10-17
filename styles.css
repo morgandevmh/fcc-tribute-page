@@ -129,4 +129,3 @@ body {
 .s-cours-coach:has(.coach:hover) .coach { width: 60%; }
 .s-cours-coach:has(.coach:hover) .cours { width: 30%; }
 
-.cours, .coach { transition: width .45s ease; float:left; }
